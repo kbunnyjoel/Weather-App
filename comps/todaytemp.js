@@ -10,7 +10,6 @@ const TodayTemp = props => {
                     <Text weight="bold" size="200px">{props.current}<sup style={{ fontSize: "70px" }}>{props.sup}</sup></Text>
                 </>
             }
-
         </Box>
     );
 
