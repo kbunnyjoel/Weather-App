@@ -110,7 +110,6 @@ export default class WeatherList extends React.Component {
                                     <Text weight="bold">{item.getDescription()}</Text>
                                 </Box>
                             </Box>
-                            }
                         )}
                 </Box>
             </Box>
