@@ -38,5 +38,5 @@ class DayClass {
         return this.date;
     }
 }
-const app = new DayClass();
+new DayClass();
 export default DayClass;
