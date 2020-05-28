@@ -39,8 +39,8 @@ const TransformData = weather_response => {
         }
 
     });
-    new DayClass();
 
     return DayItemArray;
 };
+const app = new DayClass();
 export default TransformData;
