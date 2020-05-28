@@ -39,4 +39,6 @@ class DayClass {
     }
 }
 
-export default DayClass;
+export {
+    DayClass
+};

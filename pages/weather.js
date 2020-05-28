@@ -1,9 +1,9 @@
 import React from 'react';
 import { Box, Text, Image } from 'grommet';
 import axios from 'axios';
-import TransformData from './DayItem';
+import TransformData from '../comps/DayItem';
 import SameDay from './sameday';
-import DayClass from './DayClass';
+import DayClass from '../comps/DayClass';
 
 export default class WeatherList extends React.Component {
     constructor(props) {
@@ -61,7 +61,6 @@ export default class WeatherList extends React.Component {
         if (this.state.weather_data) {
             first = this.state.weather_data[0];
         }
-        new DayClass();
         return (
             <Box>
                 <Box direction="row" pad="medium" style={{ marginTop: 50, justifyContent: "center" }}>

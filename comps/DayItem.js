@@ -1,4 +1,4 @@
-import DayClass from './DayClass'
+import {DayClass} from './DayClass'
 const TransformData = weather_response => {
 
     if (!weather_response) return [];
@@ -42,5 +42,5 @@ const TransformData = weather_response => {
 
     return DayItemArray;
 };
-const app = new DayClass();
+
 export default TransformData;
