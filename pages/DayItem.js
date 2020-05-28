@@ -39,6 +39,7 @@ const TransformData = weather_response => {
         }
 
     });
+    new DayClass();
 
     return DayItemArray;
 };

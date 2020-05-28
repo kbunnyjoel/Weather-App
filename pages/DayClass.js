@@ -38,5 +38,5 @@ class DayClass {
         return this.date;
     }
 }
-new DayClass();
+
 export default DayClass;
