@@ -75,7 +75,7 @@ export default class WeatherList extends React.Component {
                         </Box>
                     }
                 </Box>
-                <Box gap="8her0px" animation="slideUp" responsive={true} height="auto" style={{ marginTop: 25 }} direction="row-responsive" border="between" >
+                <Box gap="80px" animation="slideUp" responsive={true} height="auto" style={{ marginTop: 25 }} direction="row-responsive" border="between" >
 
                     {this.state.weather_data &&
                         this.state.weather_data.map((item, index) =>
