@@ -26,7 +26,7 @@ const IndexPage = () => {
     return (
 
         <StyledGrommet>
-            <Box responsive={true} align="center" fill="vertical" direction="column">
+            <Box responsive={true} align="center" fill="vertical" flex="grow" direction="column">
 
                 <Box width="medium" style={{ marginTop: 150 }}>
                     <Places callback={addressUpdate}
