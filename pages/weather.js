@@ -23,7 +23,7 @@ export default class WeatherList extends React.Component {
                 console.log(weather_response)
                 const weather_list = TransformData(weather_response);
                 this.setState({ weather_data: weather_list });
-                
+
                 console.log("here " + JSON.stringify(this.state.weather_data[0].date))
             })
             .catch((err) => {
@@ -61,7 +61,7 @@ export default class WeatherList extends React.Component {
             first = this.state.weather_data[0];
         }
         return (
-            <Box direction="column" responsive={true}>
+            <Box direction="column" responsive={true} style={{ minHeight: "min-content"}}>
                 <Box direction="row" pad="medium" style={{ marginTop: 30, justifyContent: "center" }}>
                     {this.state.weather_data &&
                         <Box>
