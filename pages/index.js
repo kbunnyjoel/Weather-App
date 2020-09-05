@@ -18,7 +18,7 @@ const IndexPage = () => {
     const [address, setAddress] = React.useState("");
     const addressUpdate = address => {
         setAddress(address)
-
+        console.log("Content adjusted")
     }
 
 
@@ -26,7 +26,7 @@ const IndexPage = () => {
     return (
 
         <StyledGrommet>
-            <Box responsive={true} align="center" fill="vertical" flex={true} direction="column">
+            <Box responsive={true} align="center" fill="vertical" direction="column">
 
                 <Box width="medium" style={{ marginTop: 150 }}>
                     <Places callback={addressUpdate}
