@@ -24,10 +24,9 @@ export default class WeatherList extends React.Component {
                 const weather_list = TransformData(weather_response);
                 this.setState({ weather_data: weather_list });
 
-                //console.log(weather_list)
-                console.log("here " + JSON.stringify(this.state.weather_data[0].date))
             })
             .catch((err) => {
+                alert("Please select city name")
                 console.log(err)
             })
 
@@ -50,6 +49,7 @@ export default class WeatherList extends React.Component {
 
                 })
                 .catch((err) => {
+                    alert("Please select city name")
                     console.log(err)
                 })
         }
@@ -62,7 +62,7 @@ export default class WeatherList extends React.Component {
             first = this.state.weather_data[0];
         }
         return (
-            <Box>
+            <Box direction="column" responsive={true}>
                 <Box direction="row" pad="medium" style={{ marginTop: 50, justifyContent: "center" }}>
                     {this.state.weather_data &&
                         <Box>
@@ -75,20 +75,20 @@ export default class WeatherList extends React.Component {
                         </Box>
                     }
                 </Box>
-                <Box gap="70px" pad="medium" height="300px" responsive={true} style={{ marginTop: 50 }} direction="row-responsive" border="between" >
+                <Box gap="70px" animation="slideDown" pad="medium" height="auto" responsive={true} style={{ marginTop: 50 }} direction="row-responsive" border="between" >
 
 
                     {this.state.weather_data &&
                         this.state.weather_data.map((item, index) =>
-                            
-                            <Box fill="vertical" direction="column" height="xsmall" style={{ justifyContent: "center" }}>
+
+                            <Box key={index} responsive={true} fill="vertical" direction="column" height="xsmall" style={{ justifyContent: "center" }}>
 
                                 <Box direction="row" style={{ justifyContent: "center" }} >
                                     <Text size="xlarge" weight="bold" style={{ marginRight: 10 }}>{new Date(item.getDay().toString()).toDateString().split(" ")[0]}</Text>
                                     <Text size="xlarge" weight="bold">{item.getDate()}</Text>
-                                   
+
                                 </Box>
-                                <Box direction="row" style={{ justifyContent: "center" }}>
+                                <Box style={{ justifyContent: "center" }}>
                                     <Image
                                         height="auto"
                                         width="auto"
@@ -96,18 +96,16 @@ export default class WeatherList extends React.Component {
                                         src={"http://openweathermap.org/img/wn/" + item.getIcon() + "@2x.png"}
                                     />
                                 </Box>
-                                <Box direction="row">
-                                    <Box direction="column" pad="medium" style={{ alignItems: "center" }}>
+                                <Box direction="row" justify="center">
+                                    <Box pad="medium" style={{ alignItems: "center" }}>
                                         <Text weight="bold" size="large">{Number.parseFloat(item.getMin() - 273.15).toFixed(0)}&#176;</Text>
-                                        {/* <Text>Min</Text> */}
                                     </Box>
-                                    <Box direction="column" pad="medium" style={{ alignItems: "center" }}>
+                                    <Box pad="medium" style={{ alignItems: "center" }}>
                                         <Text weight="bold" size="large">{Number.parseFloat(item.getMax() - 273.15).toFixed(0)}&#176;</Text>
-                                        {/* <Text>Max</Text> */}
                                     </Box>
 
                                 </Box>
-                                <Box pad="medium" direction="column" style={{ alignItems: "center" }}>
+                                <Box pad="medium" style={{ alignItems: "center" }}>
                                     <Text weight="bold">{item.getDescription()}</Text>
                                 </Box>
                             </Box>
