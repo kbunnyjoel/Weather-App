@@ -23,8 +23,7 @@ export default class WeatherList extends React.Component {
                 console.log(weather_response)
                 const weather_list = TransformData(weather_response);
                 this.setState({ weather_data: weather_list });
-
-                //console.log(weather_list)
+                
                 console.log("here " + JSON.stringify(this.state.weather_data[0].date))
             })
             .catch((err) => {
