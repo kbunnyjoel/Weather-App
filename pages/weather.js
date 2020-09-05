@@ -81,14 +81,14 @@ export default class WeatherList extends React.Component {
                     {this.state.weather_data &&
                         this.state.weather_data.map((item, index) =>
                             
-                            <Box fill="vertical" direction="column" height="xsmall" style={{ justifyContent: "center" }}>
+                            <Box fill="vertical" responsive={true} direction="column" height="large" style={{ justifyContent: "center" }}>
 
                                 <Box direction="row" style={{ justifyContent: "center" }} >
                                     <Text size="xlarge" weight="bold" style={{ marginRight: 10 }}>{new Date(item.getDay().toString()).toDateString().split(" ")[0]}</Text>
                                     <Text size="xlarge" weight="bold">{item.getDate()}</Text>
                                    
                                 </Box>
-                                <Box direction="row" style={{ justifyContent: "center" }}>
+                                <Box direction="column" style={{ justifyContent: "center" }}>
                                     <Image
                                         height="auto"
                                         width="auto"
@@ -96,18 +96,18 @@ export default class WeatherList extends React.Component {
                                         src={"http://openweathermap.org/img/wn/" + item.getIcon() + "@2x.png"}
                                     />
                                 </Box>
-                                <Box direction="row">
-                                    <Box direction="column" pad="medium" style={{ alignItems: "center" }}>
+                                <Box direction="row" justify="center">
+                                    <Box pad="medium" style={{ alignItems: "center" }}>
                                         <Text weight="bold" size="large">{Number.parseFloat(item.getMin() - 273.15).toFixed(0)}&#176;</Text>
                                         {/* <Text>Min</Text> */}
                                     </Box>
-                                    <Box direction="column" pad="medium" style={{ alignItems: "center" }}>
+                                    <Box pad="medium" style={{ alignItems: "center" }}>
                                         <Text weight="bold" size="large">{Number.parseFloat(item.getMax() - 273.15).toFixed(0)}&#176;</Text>
                                         {/* <Text>Max</Text> */}
                                     </Box>
 
                                 </Box>
-                                <Box pad="medium" direction="column" style={{ alignItems: "center" }}>
+                                <Box pad="medium" direction="row" justify="center">
                                     <Text weight="bold">{item.getDescription()}</Text>
                                 </Box>
                             </Box>
