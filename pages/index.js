@@ -1,5 +1,5 @@
 import { Grommet, Box } from 'grommet';
-import styled from 'styled-components'
+import styled from 'styled-components';
 import withData from '../comps/apollo_init';
 import Places from '../comps/places';
 import WeatherList from './weather.js';
@@ -11,6 +11,7 @@ const StyledGrommet = styled(Grommet)`
 
 const IndexPage = () => {
 
+    let message = "";
 
 
     const [value, setValue] = React.useState("");
