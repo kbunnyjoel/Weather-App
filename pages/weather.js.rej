@@ -1,0 +1,18 @@
+diff a/pages/weather.js b/pages/weather.js	(rejected hunks)
+@@ -81,14 +81,14 @@
+                     {this.state.weather_data &&
+                         this.state.weather_data.map((item, index) =>
+                             
+-                            <Box fill="vertical" direction="column" height="xsmall" style={{ justifyContent: "center" }}>
++                            <Box fill="vertical" responsive={true} direction="column" height="large" style={{ justifyContent: "center" }}>
+ 
+                                 <Box direction="row" style={{ justifyContent: "center" }} >
+                                     <Text size="xlarge" weight="bold" style={{ marginRight: 10 }}>{new Date(item.getDay().toString()).toDateString().split(" ")[0]}</Text>
+                                     <Text size="xlarge" weight="bold">{item.getDate()}</Text>
+                                    
+                                 </Box>
+-                                <Box direction="row" style={{ justifyContent: "center" }}>
++                                <Box direction="column" style={{ justifyContent: "center" }}>
+                                     <Image
+                                         height="auto"
+                                         width="auto"

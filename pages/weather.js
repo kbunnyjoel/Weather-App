@@ -62,11 +62,11 @@ export default class WeatherList extends React.Component {
             first = this.state.weather_data[0];
         }
         return (
-            <Box>
+            <Box direction="column" responsive={true}>
                 <Box direction="row" pad="medium" style={{ marginTop: 50, justifyContent: "center" }}>
                     {this.state.weather_data &&
                         <Box>
-                            <Box>
+                            <Box direction="row">
                                 <Text size="xxlarge" weight="bold">Today's temperature is</Text>
                             </Box>
                             <Box pad="medium" direction="row" style={{ justifyContent: "center" }}>
@@ -75,18 +75,18 @@ export default class WeatherList extends React.Component {
                         </Box>
                     }
                 </Box>
-                <Box gap="70px" pad="medium" height="300px" responsive={true} style={{ marginTop: 50 }} direction="row-responsive" border="between" >
+                <Box gap="70px" responsive={true} style={{ marginTop: 50 }} direction="row-responsive" border="between" >
 
 
                     {this.state.weather_data &&
                         this.state.weather_data.map((item, index) =>
-                            
-                            <Box fill="vertical" responsive={true} direction="column" height="large" style={{ justifyContent: "center" }}>
 
-                                <Box direction="row" style={{ justifyContent: "center" }} >
+                            <Box key={index} fill="vertical" responsive={true} direction="column" style={{ justifyContent: "center" }}>
+
+                                <Box pad="medium" direction="row" style={{ justifyContent: "center" }} >
                                     <Text size="xlarge" weight="bold" style={{ marginRight: 10 }}>{new Date(item.getDay().toString()).toDateString().split(" ")[0]}</Text>
                                     <Text size="xlarge" weight="bold">{item.getDate()}</Text>
-                                   
+
                                 </Box>
                                 <Box direction="column" style={{ justifyContent: "center" }}>
                                     <Image
@@ -96,7 +96,7 @@ export default class WeatherList extends React.Component {
                                         src={"http://openweathermap.org/img/wn/" + item.getIcon() + "@2x.png"}
                                     />
                                 </Box>
-                                <Box direction="row" justify="center">
+                                <Box direction="row" responsive={true} justify="center">
                                     <Box pad="medium" style={{ alignItems: "center" }}>
                                         <Text weight="bold" size="large">{Number.parseFloat(item.getMin() - 273.15).toFixed(0)}&#176;</Text>
                                         {/* <Text>Min</Text> */}
@@ -107,7 +107,7 @@ export default class WeatherList extends React.Component {
                                     </Box>
 
                                 </Box>
-                                <Box pad="medium" direction="row" justify="center">
+                                <Box pad="medium" align="center">
                                     <Text weight="bold">{item.getDescription()}</Text>
                                 </Box>
                             </Box>
