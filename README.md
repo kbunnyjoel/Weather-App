@@ -1,5 +1,5 @@
 # Weather-App
-A simple web weather app using React JS. Here is the link for the app deployed in Heroku hosting having automatic deploment.
+A simple web weather app using React JS. Here is the link for the app deployed in Heroku hosting having automatic deployment.
 
 UI Framework: 
 Grommet 
