@@ -24,7 +24,7 @@
     "next": "^14.0.4",
     "next-apollo": "^5.0.8",
     "polished": "^3.4.4",
-    "react": "^16.13.0",
+    "react": "^18.2.0",
     "react-dom": "^16.13.0",
     "react-places-autocomplete": "^7.2.1",
     "styled-components": "^5.0.1",
