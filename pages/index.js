@@ -1,6 +1,6 @@
 import { Grommet, Box } from 'grommet';
 import styled from 'styled-components';
-import withData from '../comps/apollo_init';
+import withApollo from '../comps/apollo_init';
 import Places from '../comps/places';
 import WeatherList from './weather.js';
 
@@ -44,4 +44,4 @@ const IndexPage = () => {
     );
 }
 
-export default withData(IndexPage);
+export default withApollo(IndexPage);
