@@ -11,10 +11,6 @@ const StyledGrommet = styled(Grommet)`
 
 const IndexPage = () => {
 
-    let message = "";
-
-
-    const [value, setValue] = React.useState("");
     const [address, setAddress] = React.useState("");
     const addressUpdate = address => {
         setAddress(address)
