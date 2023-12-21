@@ -641,14 +641,14 @@ graphql@^16.8.1:
   integrity sha512-59LZHPdGZVh695Ud9lRzPBVTtlX9ZCV150Er2W43ro37wVof0ctenSaskPPjN7lVTIN8mSZt8PHUNKZuNQUuxw==
 
 grommet-icons@^4.10.0:
-  version "4.11.0"
-  resolved "https://registry.yarnpkg.com/grommet-icons/-/grommet-icons-4.11.0.tgz#8cb97d24e84a02c1fb23f84c776ffc46b61ae29d"
-  integrity sha512-ArXf2XyXmpk5JsQ8NudzNz3mbWv+TeZkPiyog2s9yoNAWTlIr3vzNjr97uon/Xm4Uiq2kiHkvO4i2fG1u6EaDg==
+  version "4.12.0"
+  resolved "https://registry.yarnpkg.com/grommet-icons/-/grommet-icons-4.12.0.tgz#122c1f09c100f2ea6321c401107038caeda8a6b8"
+  integrity sha512-aPFVjdCBLbaUOpxzrNakxYz6DNYxS5lJeLP4tI6nZFfOzLhWH5LBf+tfkL/ZkLMNZC1Uqsw9awPvyvT03xLOsA==
 
-grommet@^2.11.1:
-  version "2.34.1"
-  resolved "https://registry.yarnpkg.com/grommet/-/grommet-2.34.1.tgz#fe86a69e43d7c25cca76e32981a6f17251542f1c"
-  integrity sha512-zZXwURaGoCgprsPug2kDXp5raTBbyajHFpSXby92jfjHlr1DFa8Wa9NR4SuaLDP+LIaKWD/dMtLYw3GSFfs5RQ==
+grommet@^2.34.2:
+  version "2.34.2"
+  resolved "https://registry.yarnpkg.com/grommet/-/grommet-2.34.2.tgz#f861fa7a4fcf4b06fcb5c7aafd9c880bd035d9d6"
+  integrity sha512-VzeL/FdbuL7H9hUBFQYz4dQdRLcSqJna+xuCiHFey4Y7gc+eOHpnOuT89zVb2slq+qH/6GYuauF9Qkq47cLYGQ==
   dependencies:
     grommet-icons "^4.10.0"
     hoist-non-react-statics "^3.2.0"
