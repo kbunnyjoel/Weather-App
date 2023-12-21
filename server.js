@@ -77,26 +77,12 @@ type WeatherData
 
 
 app.prepare().then(() => {
-  // const parsedUrl = parse(req.url, true)
-  //   const { pathname, query } = parsedUrl
-
-  // console.log(pathname);
-
-  // if (pathname === '/a') {
-  //   // app.render(req, res, '/a', query)
-  //   res.send({ hello: 'world' });
-  //   res.end();
-  // } else if (pathname === '/b') {
-  //   app.render(req, res, '/b', query)
-  // } else {
-  //   handle(req, res, parsedUrl)
-  // }
 
   const root = {
     hello: () => { return "Hello world from ApolloServer on Now 2.0!"; }, 
     weathers: async () => {
-      const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q='+city+','+country+'&appid=08159436d6bdc17558a96b5884a6368a');
-      return response.json();
+      const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q='+city+','+country+'&appid=08159436d6bdc17558a96b5884a6368a')
+      .then(()=>{return response.json();}).catch((err)=>{console.log(err)});
     }
   };
 
