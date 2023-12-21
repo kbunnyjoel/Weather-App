@@ -1,7 +1,5 @@
 import React from 'react';
-import { Box, Text, Image } from 'grommet';
-import axios from 'axios';
-
+import { Box, Text } from 'grommet';
 export default class SameDay extends React.Component {
 
     constructor(props){
@@ -16,7 +14,6 @@ export default class SameDay extends React.Component {
                 <Text size="xlarge">Today's Temperature is</Text>
                 <Text size="xxlarge">{this.props.someday}</Text>
             </Box>
-
 
         )
     }
