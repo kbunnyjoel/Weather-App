@@ -1,8 +1,5 @@
 import React from 'react';
-import PlacesAutocomplete, {
-    geocodeByAddress,
-    getLatLng,
-} from 'react-places-autocomplete';
+import PlacesAutocomplete from 'react-places-autocomplete';
 import { TextInput } from 'grommet';
 
 class LocationSearchInput extends React.Component {
@@ -20,15 +17,6 @@ class LocationSearchInput extends React.Component {
         if (this.props.callback) {
             this.props.callback(address);
         }
-        // geocodeByAddress(address)
-        //     .then(results => getLatLng(results[0]))
-        //     .then(latLng => {
-        //         console.log('Success', latLng)
-        //         // if(this.props.callback){
-        //         //     this.props.callback(latLng);    
-        //         // }
-        //     })
-        //     .catch(error => console.error('Error', error));
     };
 
     render() {
