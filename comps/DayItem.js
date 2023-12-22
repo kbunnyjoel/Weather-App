@@ -43,4 +43,4 @@ const TransformData = weather_response => {
     return DayItemArray;
 };
 
-export default TransformData;
+export default TransformData();

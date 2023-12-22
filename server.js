@@ -1,6 +1,6 @@
 const next = require('next')
 const express = require('express');
-const {graphqlHTTP} = require('express-graphql');
+const { graphqlHTTP } = require('express-graphql');
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -8,11 +8,9 @@ const handle = app.getRequestHandler()
 const { buildSchema } = require('graphql');
 const fetch = require("node-fetch");
 
-
-let place_API ="AIzaSyAoFUij9oJskNDc4opPGuYyquMmuDbFeGk";
 let city="melbourne";
-
 let country="au";
+
 const MyGraphQLSchema = buildSchema(`
 type Query {
   hello: String
@@ -83,6 +81,7 @@ app.prepare().then(() => {
     weathers: async () => {
       const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q='+city+','+country+'&appid=08159436d6bdc17558a96b5884a6368a')
       .then(()=>{return response.json();}).catch((err)=>{console.log(err)});
+      // return response.json();
     }
   };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Text, Image } from 'grommet';
 import axios from 'axios';
-import TransformData from '../comps/DayItem';
+import {TransformData} from '../comps/DayItem';
 
 export default class WeatherList extends React.Component {
     constructor(props) {
