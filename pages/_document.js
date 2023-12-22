@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head >
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoFUij9oJskNDc4opPGuYyquMmuDbFeGk&libraries=places"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoFUij9oJskNDc4opPGuYyquMmuDbFeGk&libraries=places&callback=Function.prototype"></script>
         <style>
             {`
             *, html, body {
